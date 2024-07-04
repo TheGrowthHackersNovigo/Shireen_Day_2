@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Assignment3__LCM_of_two_numbers" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="682.0000000000001,2821.3333333333335" sap2010:WorkflowViewState.IdRef="Assignment3__LCM_of_two_numbers_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Assignment3__LCM_of_two_numbers" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="913,2913" sap2010:WorkflowViewState.IdRef="Assignment3__LCM_of_two_numbers_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -78,19 +78,20 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Assignment3__LCM_of_two_numbers" sap:VirtualizedContainerService.HintSize="692,2756.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Assignment3__LCM_of_two_numbers" sap:VirtualizedContainerService.HintSize="695,2848" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="firstNumber" />
       <Variable x:TypeArguments="x:Int32" Name="secondNumber" />
       <Variable x:TypeArguments="x:Int32" Name="greater" />
-      <Variable x:TypeArguments="x:Int32" Name="Lcm" />
+      <Variable x:TypeArguments="x:Int32" Name="lcm" />
+      <Variable x:TypeArguments="x:Boolean" Name="isLcm" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage sap2010:Annotation.AnnotationText=" indicating that execution started" DisplayName="Log Message : indicating that execution started" sap:VirtualizedContainerService.HintSize="630,206" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Execution started&quot;]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText=" indicating that execution started" DisplayName="Log Message : indicating that execution started" sap:VirtualizedContainerService.HintSize="633,204" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Execution started&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -99,7 +100,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Asking user for the input - number 1" DisplayName="Input Dialog : Asking user for the input1" sap:VirtualizedContainerService.HintSize="630,306" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter the first number" Title="User input">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Asking user for the input - number 1" DisplayName="Input Dialog : Asking user for the input1" sap:VirtualizedContainerService.HintSize="633,302" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter the first number" Title="User input">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:Int32">[firstNumber]</OutArgument>
       </ui:InputDialog.Result>
@@ -111,7 +112,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InputDialog>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Asking user for the input - number 2" DisplayName="Input Dialog : Asking user for the input2" sap:VirtualizedContainerService.HintSize="630,101.33333333333333" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="enter the second number" Title="User input">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Asking user for the input - number 2" DisplayName="Input Dialog : Asking user for the input2" sap:VirtualizedContainerService.HintSize="633,99" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="enter the second number" Title="User input">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:Int32">[secondNumber]</OutArgument>
       </ui:InputDialog.Result>
@@ -123,21 +124,29 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InputDialog>
-    <If sap2010:Annotation.AnnotationText="finding the maximum of two numbers" Condition="[firstNumber&gt;secondNumber]" DisplayName="If : finding the maximum of two numbers" sap:VirtualizedContainerService.HintSize="630,715.3333333333334" sap2010:WorkflowViewState.IdRef="If_1">
+    <Assign DisplayName="Assign : flag" sap:VirtualizedContainerService.HintSize="633,114" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Boolean">[isLcm]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+      </Assign.Value>
+    </Assign>
+    <If sap2010:Annotation.AnnotationText="finding the maximum of two numbers" Condition="[firstNumber&gt;secondNumber]" DisplayName="If : finding the maximum of two numbers" sap:VirtualizedContainerService.HintSize="633,711" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap2010:Annotation.AnnotationText="storing if number1 is greater " DisplayName="Then : storing if number1 is greater " sap:VirtualizedContainerService.HintSize="496,256.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence sap2010:Annotation.AnnotationText="storing if number1 is greater " DisplayName="Then : storing if number1 is greater " sap:VirtualizedContainerService.HintSize="496,255" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign sap2010:Annotation.AnnotationText="firstNumber to greater" DisplayName="Assign : firstNumber to greater" sap:VirtualizedContainerService.HintSize="434,138" sap2010:WorkflowViewState.IdRef="Assign_1">
+          <Assign sap2010:Annotation.AnnotationText="firstNumber to greater" DisplayName="Assign : firstNumber to greater" sap:VirtualizedContainerService.HintSize="434,136" sap2010:WorkflowViewState.IdRef="Assign_1">
             <Assign.To>
               <OutArgument x:TypeArguments="x:Int32">[greater]</OutArgument>
             </Assign.To>
@@ -153,14 +162,14 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap2010:Annotation.AnnotationText="storing if number2 is greater " DisplayName="Else :  storing if number2 is greater " sap:VirtualizedContainerService.HintSize="496,256.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence sap2010:Annotation.AnnotationText="storing if number2 is greater " DisplayName="Else :  storing if number2 is greater " sap:VirtualizedContainerService.HintSize="496,255" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign sap2010:Annotation.AnnotationText="secondNumber to greater" DisplayName="Assign: secondNumber to greater" sap:VirtualizedContainerService.HintSize="434,138" sap2010:WorkflowViewState.IdRef="Assign_2">
+          <Assign sap2010:Annotation.AnnotationText="secondNumber to greater" DisplayName="Assign: secondNumber to greater" sap:VirtualizedContainerService.HintSize="434,136" sap2010:WorkflowViewState.IdRef="Assign_2">
             <Assign.To>
               <OutArgument x:TypeArguments="x:Int32">[greater]</OutArgument>
             </Assign.To>
@@ -176,15 +185,15 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While : determining the LCM" sap:VirtualizedContainerService.HintSize="630,994.6666666666666" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While : determining the LCM" sap:VirtualizedContainerService.HintSize="633,984" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
       <ui:InterruptibleWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="596,847.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="599,838" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If sap2010:Annotation.AnnotationText="Checking whether the greater number is perfectly divisble by the two input numbers" Condition="[(greater mod firstNumber =0) and (greater mod secondNumber=0)]" DisplayName="If : checking whether the greater number is perfectly divisble by the two input numbers" sap:VirtualizedContainerService.HintSize="534,759.3333333333334" sap2010:WorkflowViewState.IdRef="If_2">
+          <If sap2010:Annotation.AnnotationText="Checking whether the greater number is perfectly divisble by the two input numbers" Condition="[(greater mod firstNumber =0) and (greater mod secondNumber=0)]" DisplayName="If : checking whether the greater number is perfectly divisble by the two input numbers" sap:VirtualizedContainerService.HintSize="537,750" sap2010:WorkflowViewState.IdRef="If_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -193,16 +202,16 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap2010:Annotation.AnnotationText="Then : calculating and storing the value in the variable&#xD;&#xA;" DisplayName="Then : calculating and storing the value in the variable" sap:VirtualizedContainerService.HintSize="498.6666666666667,340.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Sequence sap2010:Annotation.AnnotationText="Then : calculating and storing the value in the variable&#xA;" DisplayName="Then : calculating and storing the value in the variable" sap:VirtualizedContainerService.HintSize="502,334" sap2010:WorkflowViewState.IdRef="Sequence_4">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Assign sap2010:Annotation.AnnotationText="greater value as lcm if the greater value is perfectly divisible by two numbers" DisplayName="Assign : greater value as lcm if the greater value is perfectly divisible by two numbers" sap:VirtualizedContainerService.HintSize="436.6666666666667,160.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign sap2010:Annotation.AnnotationText="greater value as lcm if the greater value is perfectly divisible by two numbers" DisplayName="Assign : greater value as lcm if the greater value is perfectly divisible by two numbers" sap:VirtualizedContainerService.HintSize="440,156" sap2010:WorkflowViewState.IdRef="Assign_3">
                   <Assign.To>
-                    <OutArgument x:TypeArguments="x:Int32">[Lcm]</OutArgument>
+                    <OutArgument x:TypeArguments="x:Int32">[lcm]</OutArgument>
                   </Assign.To>
                   <Assign.Value>
                     <InArgument x:TypeArguments="x:Int32">[greater]</InArgument>
@@ -213,17 +222,17 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </Assign>
-                <ui:Break DisplayName="Break : if the numbers are perfectly divisible" sap:VirtualizedContainerService.HintSize="436.6666666666667,48" sap2010:WorkflowViewState.IdRef="Break_1" />
+                <ui:Break DisplayName="Break : if the numbers are perfectly divisible" sap:VirtualizedContainerService.HintSize="440,48" sap2010:WorkflowViewState.IdRef="Break_1" />
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence DisplayName="Else : incrementing the greater by one" sap:VirtualizedContainerService.HintSize="496,226" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence DisplayName="Else : incrementing the greater by one" sap:VirtualizedContainerService.HintSize="496,224" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Assign sap2010:Annotation.AnnotationText="incrementing the value of greater" DisplayName="Assign : incrementing" sap:VirtualizedContainerService.HintSize="434,138" sap2010:WorkflowViewState.IdRef="Assign_4">
+                <Assign sap2010:Annotation.AnnotationText="incrementing the value of greater" DisplayName="Assign : incrementing" sap:VirtualizedContainerService.HintSize="434,136" sap2010:WorkflowViewState.IdRef="Assign_4">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Int32">[greater]</OutArgument>
                   </Assign.To>
@@ -242,7 +251,7 @@
         </Sequence>
       </ui:InterruptibleWhile.Body>
       <ui:InterruptibleWhile.Condition>
-        <Literal x:TypeArguments="x:Boolean" DisplayName="Literal" Value="True" />
+        <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="not isLcm" />
       </ui:InterruptibleWhile.Condition>
     </ui:InterruptibleWhile>
     <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Displaying LCM of two numbers" AutoCloseAfter="00:00:00" DisplayName="Message Box : Displaying LCM of two numbers" sap:VirtualizedContainerService.HintSize="630,148.66666666666666" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;LCM of two numbers &quot;+firstNumber.ToString+&quot; and &quot;+secondNumber.ToString+&quot; is &quot;+Lcm.ToString]">

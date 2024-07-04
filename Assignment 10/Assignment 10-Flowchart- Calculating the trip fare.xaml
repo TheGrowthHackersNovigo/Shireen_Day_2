@@ -127,16 +127,13 @@
             </sap:WorkflowViewStateService.ViewState>
           </ui:InputDialog>
           <FlowStep.Next>
-            <FlowDecision x:Name="__ReferenceID2" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
-              <FlowDecision.Condition>
-                <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="totalTrip&gt;=100" />
-              </FlowDecision.Condition>
+            <FlowDecision x:Name="__ReferenceID2" Condition="[totalTrip&gt;=100]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <av:Point x:Key="ShapeLocation">460,310</av:Point>
                   <av:Size x:Key="ShapeSize">59,59</av:Size>
-                  <av:PointCollection x:Key="TrueConnector">519,339.5 549,339.5 549,340 605,340</av:PointCollection>
+                  <av:PointCollection x:Key="TrueConnector">460,339.5 430,339.5 430,340 395,340</av:PointCollection>
                   <av:PointCollection x:Key="FalseConnector">489.5,369 489.5,410</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -144,9 +141,9 @@
                 <FlowStep x:Name="__ReferenceID5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">605,305</av:Point>
+                      <av:Point x:Key="ShapeLocation">285,305</av:Point>
                       <av:Size x:Key="ShapeSize">110,70</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">715,340 785,340</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">285,340 255,340</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText=" Displaying the trip fare for more than 100 kms" AutoCloseAfter="00:00:00" DisplayName="Message Box : Displaying the trip fare for more than 100 kms" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;The trip fare for &quot;+totalTrip.ToString+&quot;kilomenter is &quot;+(totalTrip*6).toString+&quot; rupees&quot;]">
@@ -160,7 +157,7 @@
                     <FlowStep x:Name="__ReferenceID11">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">785,305</av:Point>
+                          <av:Point x:Key="ShapeLocation">145,305</av:Point>
                           <av:Size x:Key="ShapeSize">110,70</av:Size>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -178,16 +175,13 @@
                 </FlowStep>
               </FlowDecision.True>
               <FlowDecision.False>
-                <FlowDecision x:Name="__ReferenceID3" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
-                  <FlowDecision.Condition>
-                    <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="totalTrip&lt;100 and totalTrip&gt;=20" />
-                  </FlowDecision.Condition>
+                <FlowDecision x:Name="__ReferenceID3" Condition="[totalTrip&lt;100 and totalTrip&gt;=20]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <av:Point x:Key="ShapeLocation">460,410</av:Point>
                       <av:Size x:Key="ShapeSize">59,59</av:Size>
-                      <av:PointCollection x:Key="TrueConnector">519,439.5 549,439.5 549,440 615,440</av:PointCollection>
+                      <av:PointCollection x:Key="TrueConnector">460,439.5 430,439.5 430,450 395,450</av:PointCollection>
                       <av:PointCollection x:Key="FalseConnector">489.5,469 489.5,500</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -195,9 +189,9 @@
                     <FlowStep x:Name="__ReferenceID6">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">615,405</av:Point>
+                          <av:Point x:Key="ShapeLocation">285,415</av:Point>
                           <av:Size x:Key="ShapeSize">110,70</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">725,440 755,440 755,450 785,450</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">285,450 255,450</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Displaying trip fare for more than 20 kms" AutoCloseAfter="00:00:00" DisplayName="Message Box : Displaying trip fare for more than 20 kms" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;The trip fare for &quot;+totalTrip.ToString+&quot;kilomenter is &quot;+(totalTrip*8).toString+&quot; rupees&quot;]">
@@ -211,7 +205,7 @@
                         <FlowStep x:Name="__ReferenceID12">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">785,415</av:Point>
+                              <av:Point x:Key="ShapeLocation">145,415</av:Point>
                               <av:Size x:Key="ShapeSize">110,70</av:Size>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
@@ -229,16 +223,13 @@
                     </FlowStep>
                   </FlowDecision.True>
                   <FlowDecision.False>
-                    <FlowDecision x:Name="__ReferenceID4" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
-                      <FlowDecision.Condition>
-                        <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="totalTrip&gt;5 and totalTrip&lt;20" />
-                      </FlowDecision.Condition>
+                    <FlowDecision x:Name="__ReferenceID4" Condition="[totalTrip&gt;5 and totalTrip&lt;20]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <av:Point x:Key="ShapeLocation">460,500</av:Point>
                           <av:Size x:Key="ShapeSize">59,59</av:Size>
-                          <av:PointCollection x:Key="TrueConnector">519,529.5 549,529.5 549,530 615,530</av:PointCollection>
+                          <av:PointCollection x:Key="TrueConnector">460,529.5 430,529.5 430,540 395,540</av:PointCollection>
                           <av:PointCollection x:Key="FalseConnector">489.5,559 489.5,590</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -246,9 +237,9 @@
                         <FlowStep x:Name="__ReferenceID7">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">615,495</av:Point>
+                              <av:Point x:Key="ShapeLocation">285,505</av:Point>
                               <av:Size x:Key="ShapeSize">110,70</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">725,530 785,530</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">285,540 255,540</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Displaying total fare for more than 5 kms" AutoCloseAfter="00:00:00" DisplayName="Message Box : Displaying total fare for more than 5 kms" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;The trip fare for &quot;+totalTrip.ToString+&quot;kilomenter is &quot;+(totalTrip*9).toString+&quot; rupees&quot;]">
@@ -262,7 +253,7 @@
                             <FlowStep x:Name="__ReferenceID13">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">785,495</av:Point>
+                                  <av:Point x:Key="ShapeLocation">145,505</av:Point>
                                   <av:Size x:Key="ShapeSize">110,70</av:Size>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
@@ -280,26 +271,23 @@
                         </FlowStep>
                       </FlowDecision.True>
                       <FlowDecision.False>
-                        <FlowDecision x:Name="__ReferenceID8" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
-                          <FlowDecision.Condition>
-                            <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="totalTrip&lt;=5 and totalTrip&gt;=0" />
-                          </FlowDecision.Condition>
+                        <FlowDecision x:Name="__ReferenceID8" Condition="[totalTrip&lt;=5 and totalTrip&gt;=0]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <av:Point x:Key="ShapeLocation">460,590</av:Point>
                               <av:Size x:Key="ShapeSize">59,59</av:Size>
-                              <av:PointCollection x:Key="TrueConnector">519,619.5 549,619.5 549,620 615,620</av:PointCollection>
-                              <av:PointCollection x:Key="FalseConnector">489.5,649 489.5,679 510,679 510,705</av:PointCollection>
+                              <av:PointCollection x:Key="TrueConnector">460,619.5 430,619.5 430,630 395,630</av:PointCollection>
+                              <av:PointCollection x:Key="FalseConnector">489.5,649 489.5,679 490,679 490,705</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <FlowDecision.True>
                             <FlowStep x:Name="__ReferenceID9">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">615,585</av:Point>
+                                  <av:Point x:Key="ShapeLocation">285,595</av:Point>
                                   <av:Size x:Key="ShapeSize">110,70</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">725,620 785,620</av:PointCollection>
+                                  <av:PointCollection x:Key="ConnectorLocation">285,630 255,630</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText=" displaying the fare" AutoCloseAfter="00:00:00" DisplayName="Message Box : displaying the fare" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;The trip fare is 50 rupees&quot;]">
@@ -313,7 +301,7 @@
                                 <FlowStep x:Name="__ReferenceID14">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:Point x:Key="ShapeLocation">785,585</av:Point>
+                                      <av:Point x:Key="ShapeLocation">145,595</av:Point>
                                       <av:Size x:Key="ShapeSize">110,70</av:Size>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
@@ -334,9 +322,9 @@
                             <FlowStep x:Name="__ReferenceID10">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">455,705</av:Point>
+                                  <av:Point x:Key="ShapeLocation">435,705</av:Point>
                                   <av:Size x:Key="ShapeSize">110,70</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">510,775 510,805 500,805 500,815</av:PointCollection>
+                                  <av:PointCollection x:Key="ConnectorLocation">490,775 490,805</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Asking user to enter the right input" AutoCloseAfter="00:00:00" DisplayName="Message Box : Asking user to enter the right input" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;Please provide the correct input&quot;]">
@@ -350,7 +338,7 @@
                                 <FlowStep x:Name="__ReferenceID1">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:Point x:Key="ShapeLocation">445,815</av:Point>
+                                      <av:Point x:Key="ShapeLocation">435,805</av:Point>
                                       <av:Size x:Key="ShapeSize">110,70</av:Size>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>

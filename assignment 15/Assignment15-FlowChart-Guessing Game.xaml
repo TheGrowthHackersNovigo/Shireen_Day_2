@@ -80,7 +80,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="Assignment15_FlowChart_Guessing_Game" sap:VirtualizedContainerService.HintSize="943.3333333333334,423.3333333333333" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="Assignment15_FlowChart_Guessing_Game" sap:VirtualizedContainerService.HintSize="973,606" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:Int32" Name="randomNumber" />
       <Variable x:TypeArguments="x:Int32" Name="guessNumber" />
@@ -90,18 +90,18 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Size x:Key="ShapeSize">50,50</av:Size>
         <av:Point x:Key="ShapeLocation">465,5</av:Point>
-        <av:PointCollection x:Key="ConnectorLocation">490,55 490,90 545,90</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">490,55 490,75</av:PointCollection>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID8</x:Reference>
+      <x:Reference>__ReferenceID9</x:Reference>
     </Flowchart.StartNode>
     <FlowStep x:Name="__ReferenceID0">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">435,255</av:Point>
+          <av:Point x:Key="ShapeLocation">435,275</av:Point>
           <av:Size x:Key="ShapeSize">110,70</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">490,325 490,355 489.5,355 489.5,360</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">490,345 490,375 489.5,375 489.5,400</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Taking the user input" DisplayName="Input Dialog : Take the user input" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter the guessing number" Title="Input User">
@@ -116,23 +116,23 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:InputDialog>
       <FlowStep.Next>
-        <FlowDecision x:Name="__ReferenceID1" Condition="[guessNumber=randomNumber]" DisplayName="Flow Decision to check whether the user has won or no" sap:VirtualizedContainerService.HintSize="60.666666666666664,60.666666666666664" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+        <FlowDecision x:Name="__ReferenceID1" Condition="[guessNumber=randomNumber]" DisplayName="Flow Decision to check whether the user has won or no" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              <av:Point x:Key="ShapeLocation">460,360</av:Point>
-              <av:Size x:Key="ShapeSize">60.666666666666664,60.666666666666664</av:Size>
-              <av:PointCollection x:Key="TrueConnector">460,389.5 430,389.5 430,390 415,390</av:PointCollection>
-              <av:PointCollection x:Key="FalseConnector">520.6666666666666,390.3333333333333 590,390.3333333333333</av:PointCollection>
+              <av:Point x:Key="ShapeLocation">460,400</av:Point>
+              <av:Size x:Key="ShapeSize">59,59</av:Size>
+              <av:PointCollection x:Key="TrueConnector">460,429.5 430,429.5 430,430 385,430</av:PointCollection>
+              <av:PointCollection x:Key="FalseConnector">489.5,459 489.5,520</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <FlowDecision.True>
             <FlowStep x:Name="__ReferenceID2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">305,355</av:Point>
+                  <av:Point x:Key="ShapeLocation">275,395</av:Point>
                   <av:Size x:Key="ShapeSize">110,70</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">360,425 360,505</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">275,430 235,430</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="The user has guessed the correct number" AutoCloseAfter="00:00:00" DisplayName="Message Box : Winning message" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Congratulations! you won&quot;]">
@@ -147,7 +147,7 @@
                 <FlowStep x:Name="__ReferenceID7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">305,505</av:Point>
+                      <av:Point x:Key="ShapeLocation">125,395</av:Point>
                       <av:Size x:Key="ShapeSize">110,70</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -164,14 +164,14 @@
             </FlowStep>
           </FlowDecision.True>
           <FlowDecision.False>
-            <FlowDecision x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="flow decision to give hints whether a number is greater or smaller" Condition="[guessNumber&gt;randomNumber]" DisplayName="Flow Decision to give hints" sap:VirtualizedContainerService.HintSize="60.666666666666664,60.666666666666664" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+            <FlowDecision x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="flow decision to give hints whether a number is greater or smaller" Condition="[guessNumber&gt;randomNumber]" DisplayName="Flow Decision to give hints" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <av:Point x:Key="ShapeLocation">590,360</av:Point>
-                  <av:Size x:Key="ShapeSize">60.666666666666664,60.666666666666664</av:Size>
-                  <av:PointCollection x:Key="TrueConnector">650.6666666666666,390.3333333333333 680.6666666666666,390.3333333333333 680.6666666666666,390 695,390</av:PointCollection>
-                  <av:PointCollection x:Key="FalseConnector">620.3333333333334,420.6666666666667 620.3333333333334,450.6666666666667 610,450.6666666666667 610,465</av:PointCollection>
+                  <av:Point x:Key="ShapeLocation">460,520</av:Point>
+                  <av:Size x:Key="ShapeSize">59,59</av:Size>
+                  <av:PointCollection x:Key="TrueConnector">460,549.5 430,549.5 430,550 385,550</av:PointCollection>
+                  <av:PointCollection x:Key="FalseConnector">489.5,579 489.5,609 490,609 490,635</av:PointCollection>
                   <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -179,9 +179,9 @@
                 <FlowStep x:Name="__ReferenceID4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">695,355</av:Point>
+                      <av:Point x:Key="ShapeLocation">275,515</av:Point>
                       <av:Size x:Key="ShapeSize">110,70</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">805,390 825,390 825,230 405,230 405,290 435,290</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">275,550 235,550</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText=" To enter a smaller number" AutoCloseAfter="00:00:00" DisplayName="Message Box : To enter a smaller number" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;The guessed number is greater than secret number. Enter a smaller number&quot;]">
@@ -193,7 +193,22 @@
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:MessageBox>
                   <FlowStep.Next>
-                    <x:Reference>__ReferenceID0</x:Reference>
+                    <FlowStep x:Name="__ReferenceID8">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">125,515</av:Point>
+                          <av:Size x:Key="ShapeSize">110,70</av:Size>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage sap2010:Annotation.AnnotationText=" To tell execution has completed" DisplayName="Log Message : To tell execution has completed" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Execution completed&quot;]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:LogMessage>
+                    </FlowStep>
                   </FlowStep.Next>
                 </FlowStep>
               </FlowDecision.True>
@@ -201,9 +216,8 @@
                 <FlowStep x:Name="__ReferenceID5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">555,465</av:Point>
+                      <av:Point x:Key="ShapeLocation">435,635</av:Point>
                       <av:Size x:Key="ShapeSize">110,70</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">665,500 695,500 695,435 575,435 575,290 545,290</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="To enter a greater number" AutoCloseAfter="00:00:00" DisplayName="Message Box : enter a greater number" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;The guessed number is smaller than the secret number.Enter a grater number&quot;]">
@@ -214,9 +228,6 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:MessageBox>
-                  <FlowStep.Next>
-                    <x:Reference>__ReferenceID0</x:Reference>
-                  </FlowStep.Next>
                 </FlowStep>
               </FlowDecision.False>
             </FlowDecision>
@@ -227,9 +238,9 @@
     <FlowStep x:Name="__ReferenceID6">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">435,135</av:Point>
+          <av:Point x:Key="ShapeLocation">435,165</av:Point>
           <av:Size x:Key="ShapeSize">110,70</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">490,205 490,255</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">490,235 490,275</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Assign sap2010:Annotation.AnnotationText="Generate random number" DisplayName="Assign :Generate random number" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Assign_1">
@@ -255,12 +266,12 @@
     <x:Reference>__ReferenceID3</x:Reference>
     <x:Reference>__ReferenceID4</x:Reference>
     <x:Reference>__ReferenceID5</x:Reference>
-    <FlowStep x:Name="__ReferenceID8">
+    <FlowStep x:Name="__ReferenceID9">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">545,55</av:Point>
+          <av:Point x:Key="ShapeLocation">435,75</av:Point>
           <av:Size x:Key="ShapeSize">110,70</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">655,90 685,90 685,0 445,0 445,105 490,105 490,135</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">490,145 490,165</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:LogMessage sap2010:Annotation.AnnotationText=" To tell execution has begun" DisplayName="Log Message : To tell execution has begun" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Execution started&quot;]">
@@ -275,5 +286,6 @@
       </FlowStep.Next>
     </FlowStep>
     <x:Reference>__ReferenceID7</x:Reference>
+    <x:Reference>__ReferenceID8</x:Reference>
   </Flowchart>
 </Activity>

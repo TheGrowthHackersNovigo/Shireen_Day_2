@@ -177,7 +177,7 @@
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">425,535</av:Point>
                           <av:Size x:Key="ShapeSize">110,70</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">480,605 480,635 470,635 470,645</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">480,605 480,655</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <Assign sap2010:Annotation.AnnotationText="Creating an array to store the fibonacci series" DisplayName="Assign : creating an array to store the fibonacci series" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Assign_7">
@@ -199,9 +199,9 @@
                         <FlowStep x:Name="__ReferenceID3">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">415,645</av:Point>
+                              <av:Point x:Key="ShapeLocation">425,655</av:Point>
                               <av:Size x:Key="ShapeSize">110,70</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">470,715 470,745 480,745 480,835</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">480,725 480,765</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <ParallelForEach x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="Looping through the range" DisplayName="Parallel For Each : Looping through the range" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="ParallelForEach`1_1" Values="[Enumerable.Range(1,n)]">
@@ -283,9 +283,9 @@
                             <FlowStep x:Name="__ReferenceID4">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">425,835</av:Point>
+                                  <av:Point x:Key="ShapeLocation">425,765</av:Point>
                                   <av:Size x:Key="ShapeSize">110,70</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">480,905 480,955</av:PointCollection>
+                                  <av:PointCollection x:Key="ConnectorLocation">480,835 480,885</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Displaying the fibonacci series" AutoCloseAfter="00:00:00" DisplayName="Message Box : Displaying the fibonacci series" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[String.join(&quot;,&quot;,arrayOfSeries)]">
@@ -299,7 +299,7 @@
                                 <FlowStep x:Name="__ReferenceID5">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:Point x:Key="ShapeLocation">425,955</av:Point>
+                                      <av:Point x:Key="ShapeLocation">425,885</av:Point>
                                       <av:Size x:Key="ShapeSize">110,70</av:Size>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>

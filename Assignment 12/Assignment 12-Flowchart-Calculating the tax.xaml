@@ -129,26 +129,23 @@
             </sap:WorkflowViewStateService.ViewState>
           </ui:InputDialog>
           <FlowStep.Next>
-            <FlowDecision x:Name="__ReferenceID2" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
-              <FlowDecision.Condition>
-                <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="ctc&lt;250000" />
-              </FlowDecision.Condition>
+            <FlowDecision x:Name="__ReferenceID2" Condition="[ctc&lt;250000]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <av:Point x:Key="ShapeLocation">470,330</av:Point>
                   <av:Size x:Key="ShapeSize">59,59</av:Size>
-                  <av:PointCollection x:Key="TrueConnector">499.5,389 499.5,419 440,419 440,305 340,305 340,335</av:PointCollection>
-                  <av:PointCollection x:Key="FalseConnector">529,359.5 660,359.5</av:PointCollection>
+                  <av:PointCollection x:Key="TrueConnector">470,359.5 440,359.5 440,360 395,360</av:PointCollection>
+                  <av:PointCollection x:Key="FalseConnector">499.5,389 499.5,430</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <FlowDecision.True>
                 <FlowStep x:Name="__ReferenceID4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">285,335</av:Point>
+                      <av:Point x:Key="ShapeLocation">285,325</av:Point>
                       <av:Size x:Key="ShapeSize">110,70</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">285,370 255,370 255,380 215,380</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">285,360 245,360</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText=" displaying the tax for lesser than 250000" AutoCloseAfter="00:00:00" DisplayName="Message Box : displaying the tax for lesser than 250000" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;No tax for &quot;+ctc.ToString+&quot; ctc&quot;]">
@@ -162,7 +159,7 @@
                     <FlowStep x:Name="__ReferenceID9">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">105,345</av:Point>
+                          <av:Point x:Key="ShapeLocation">135,325</av:Point>
                           <av:Size x:Key="ShapeSize">110,70</av:Size>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -180,26 +177,23 @@
                 </FlowStep>
               </FlowDecision.True>
               <FlowDecision.False>
-                <FlowDecision x:Name="__ReferenceID3" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
-                  <FlowDecision.Condition>
-                    <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="ctc&gt;=250000 and ctc&lt;500000" />
-                  </FlowDecision.Condition>
+                <FlowDecision x:Name="__ReferenceID3" Condition="[ctc&gt;=250000 and ctc&lt;500000]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <av:Point x:Key="ShapeLocation">660,330</av:Point>
+                      <av:Point x:Key="ShapeLocation">470,430</av:Point>
                       <av:Size x:Key="ShapeSize">59,59</av:Size>
-                      <av:PointCollection x:Key="TrueConnector">719,359.5 749,359.5 749,360 785,360</av:PointCollection>
-                      <av:PointCollection x:Key="FalseConnector">689.5,389 689.5,440</av:PointCollection>
+                      <av:PointCollection x:Key="FalseConnector">499.5,489 499.5,550</av:PointCollection>
+                      <av:PointCollection x:Key="TrueConnector">470,459.5 440,459.5 440,460 395,460</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <FlowDecision.True>
                     <FlowStep x:Name="__ReferenceID5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">785,325</av:Point>
+                          <av:Point x:Key="ShapeLocation">285,425</av:Point>
                           <av:Size x:Key="ShapeSize">110,70</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">895,360 955,360</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">285,460 235,460</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Displaying the tax for lesser than 500000" AutoCloseAfter="00:00:00" DisplayName="Message Box : Displaying the tax for lesser than 500000" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;5% tax for &quot;+ctc.ToString+&quot; ctc&quot;]">
@@ -213,7 +207,7 @@
                         <FlowStep x:Name="__ReferenceID10">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">955,325</av:Point>
+                              <av:Point x:Key="ShapeLocation">125,425</av:Point>
                               <av:Size x:Key="ShapeSize">110,70</av:Size>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
@@ -231,26 +225,23 @@
                     </FlowStep>
                   </FlowDecision.True>
                   <FlowDecision.False>
-                    <FlowDecision x:Name="__ReferenceID6" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
-                      <FlowDecision.Condition>
-                        <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="ctc&gt;=500000 and ctc&lt;1000000" />
-                      </FlowDecision.Condition>
+                    <FlowDecision x:Name="__ReferenceID6" Condition="[ctc&gt;=500000 and ctc&lt;1000000]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <av:Point x:Key="ShapeLocation">660,440</av:Point>
+                          <av:Point x:Key="ShapeLocation">470,550</av:Point>
                           <av:Size x:Key="ShapeSize">59,59</av:Size>
-                          <av:PointCollection x:Key="TrueConnector">719,469.5 749,469.5 749,460 795,460</av:PointCollection>
-                          <av:PointCollection x:Key="FalseConnector">689.5,499 689.5,529 690,529 690,555</av:PointCollection>
+                          <av:PointCollection x:Key="TrueConnector">470,579.5 440,579.5 440,580 395,580</av:PointCollection>
+                          <av:PointCollection x:Key="FalseConnector">499.5,609 499.5,639 500,639 500,675</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <FlowDecision.True>
                         <FlowStep x:Name="__ReferenceID7">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">795,425</av:Point>
+                              <av:Point x:Key="ShapeLocation">285,545</av:Point>
                               <av:Size x:Key="ShapeSize">110,70</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">905,460 965,460</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">285,580 235,580</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="displaying the tax for lesser than 1000000" AutoCloseAfter="00:00:00" DisplayName="Message Box : displaying the tax for lesser than 1000000" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;20% tax for &quot;+ctc.ToString+&quot; ctc&quot;]">
@@ -264,7 +255,7 @@
                             <FlowStep x:Name="__ReferenceID11">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">965,425</av:Point>
+                                  <av:Point x:Key="ShapeLocation">125,545</av:Point>
                                   <av:Size x:Key="ShapeSize">110,70</av:Size>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
@@ -285,9 +276,9 @@
                         <FlowStep x:Name="__ReferenceID8">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">635,555</av:Point>
+                              <av:Point x:Key="ShapeLocation">445,675</av:Point>
                               <av:Size x:Key="ShapeSize">110,70</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">690,625 690,655</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">500,745 500,785</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText=" displaying the tax for 1000000" AutoCloseAfter="00:00:00" DisplayName="Message Box : displaying the tax for 1000000" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;25% tax for &quot;+ctc.ToString+&quot; ctc&quot;]">
@@ -301,7 +292,7 @@
                             <FlowStep x:Name="__ReferenceID1">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">635,655</av:Point>
+                                  <av:Point x:Key="ShapeLocation">445,785</av:Point>
                                   <av:Size x:Key="ShapeSize">110,70</av:Size>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>

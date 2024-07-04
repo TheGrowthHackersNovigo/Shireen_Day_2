@@ -137,7 +137,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <av:Point x:Key="ShapeLocation">460,320</av:Point>
                   <av:Size x:Key="ShapeSize">59,59</av:Size>
-                  <av:PointCollection x:Key="TrueConnector">519,349.5 549,349.5 549,340 615,340</av:PointCollection>
+                  <av:PointCollection x:Key="TrueConnector">460,349.5 430,349.5 430,340 425,340</av:PointCollection>
                   <av:PointCollection x:Key="FalseConnector">489.5,379 489.5,430</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -145,9 +145,9 @@
                 <FlowStep x:Name="__ReferenceID5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">615,305</av:Point>
+                      <av:Point x:Key="ShapeLocation">315,305</av:Point>
                       <av:Size x:Key="ShapeSize">110,70</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">725,340 755,340 755,360 815,360</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">315,340 285,340</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box : displaying the grade A+" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;You secured A+ grade&quot;]" />
@@ -155,7 +155,7 @@
                     <FlowStep x:Name="__ReferenceID9">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">815,325</av:Point>
+                          <av:Point x:Key="ShapeLocation">175,305</av:Point>
                           <av:Size x:Key="ShapeSize">110,70</av:Size>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -182,7 +182,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <av:Point x:Key="ShapeLocation">460,430</av:Point>
                       <av:Size x:Key="ShapeSize">59,59</av:Size>
-                      <av:PointCollection x:Key="TrueConnector">519,459.5 549,459.5 549,450 625,450</av:PointCollection>
+                      <av:PointCollection x:Key="TrueConnector">460,459.5 430,459.5 430,450 425,450</av:PointCollection>
                       <av:PointCollection x:Key="FalseConnector">489.5,489 489.5,550</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -190,9 +190,9 @@
                     <FlowStep x:Name="__ReferenceID6">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">625,415</av:Point>
+                          <av:Point x:Key="ShapeLocation">315,415</av:Point>
                           <av:Size x:Key="ShapeSize">110,70</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">735,450 765,450 765,460 815,460</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">315,450 285,450</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box :Displaying the grade A" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;You secured A grade&quot;]" />
@@ -200,7 +200,7 @@
                         <FlowStep x:Name="__ReferenceID10">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">815,425</av:Point>
+                              <av:Point x:Key="ShapeLocation">175,415</av:Point>
                               <av:Size x:Key="ShapeSize">110,70</av:Size>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
@@ -227,7 +227,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <av:Point x:Key="ShapeLocation">460,550</av:Point>
                           <av:Size x:Key="ShapeSize">59,59</av:Size>
-                          <av:PointCollection x:Key="TrueConnector">519,579.5 549,579.5 549,560 625,560</av:PointCollection>
+                          <av:PointCollection x:Key="TrueConnector">460,579.5 430,579.5 430,580 425,580</av:PointCollection>
                           <av:PointCollection x:Key="FalseConnector">489.5,609 489.5,639 500,639 500,665</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -235,9 +235,9 @@
                         <FlowStep x:Name="__ReferenceID7">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">625,525</av:Point>
+                              <av:Point x:Key="ShapeLocation">315,545</av:Point>
                               <av:Size x:Key="ShapeSize">110,70</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">735,560 825,560</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">315,580 285,580</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box : Displaying the grade B" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;You secured B grade&quot;]" />
@@ -245,7 +245,7 @@
                             <FlowStep x:Name="__ReferenceID11">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">825,525</av:Point>
+                                  <av:Point x:Key="ShapeLocation">175,545</av:Point>
                                   <av:Size x:Key="ShapeSize">110,70</av:Size>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
@@ -268,7 +268,7 @@
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">445,665</av:Point>
                               <av:Size x:Key="ShapeSize">110,70</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">500,735 500,825</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">500,735 500,785</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName=" Message Box : Displaying the grade C" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;You secured C grade&quot;]" />
@@ -276,7 +276,7 @@
                             <FlowStep x:Name="__ReferenceID1">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">445,825</av:Point>
+                                  <av:Point x:Key="ShapeLocation">445,785</av:Point>
                                   <av:Size x:Key="ShapeSize">110,70</av:Size>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
