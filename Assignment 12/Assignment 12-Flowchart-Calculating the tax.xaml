@@ -83,8 +83,8 @@
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Size x:Key="ShapeSize">50,50</av:Size>
-        <av:Point x:Key="ShapeLocation">465,35</av:Point>
-        <av:PointCollection x:Key="ConnectorLocation">490,85 490,105 500,105</av:PointCollection>
+        <av:Point x:Key="ShapeLocation">475,25</av:Point>
+        <av:PointCollection x:Key="ConnectorLocation">500,75 500,105</av:PointCollection>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>

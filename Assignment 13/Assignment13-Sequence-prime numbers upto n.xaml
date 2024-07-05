@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Assignment13_Sequence_prime_numbers_upto_n" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="883.3333333333334,2954.6666666666665" sap2010:WorkflowViewState.IdRef="Assignment13_Sequence_prime_numbers_upto_n_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Assignment13_Sequence_prime_numbers_upto_n" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="913,2937" sap2010:WorkflowViewState.IdRef="Assignment13_Sequence_prime_numbers_upto_n_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -83,7 +83,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Assignment13_Sequence_prime_numbers_upto_n" sap:VirtualizedContainerService.HintSize="755.3333333333334,2890" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Assignment13_Sequence_prime_numbers_upto_n" sap:VirtualizedContainerService.HintSize="755,2872" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="flag" />
       <Variable x:TypeArguments="x:Int32" Name="userInput" />
@@ -94,7 +94,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage sap2010:Annotation.AnnotationText=" indicating that execution started" DisplayName="Log Message : indicating that execution started" sap:VirtualizedContainerService.HintSize="693.3333333333334,102.66666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Execution started&quot;]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText=" indicating that execution started" DisplayName="Log Message : indicating that execution started" sap:VirtualizedContainerService.HintSize="693,99" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Execution started&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -103,7 +103,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Asking the user to enter a range" DisplayName="Input Dialog : Asking the user to enter a range" sap:VirtualizedContainerService.HintSize="693.3333333333334,308.6666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter a number till where you want to find the prime number" Title="User Input">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Asking the user to enter a range" DisplayName="Input Dialog : Asking the user to enter a range" sap:VirtualizedContainerService.HintSize="693,302" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter a number till where you want to find the prime number" Title="User Input">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:Int32">[userInput]</OutArgument>
       </ui:InputDialog.Result>
@@ -115,12 +115,12 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InputDialog>
-    <Assign sap2010:Annotation.AnnotationText="Assign : Creating an array to store the prime numbers" DisplayName="Assign : Creating an array to store the prime numbers" sap:VirtualizedContainerService.HintSize="693.3333333333334,148" sap2010:WorkflowViewState.IdRef="Assign_4">
+    <Assign sap2010:Annotation.AnnotationText="Assign : Creating an array to store the prime numbers" DisplayName="Assign : Creating an array to store the prime numbers" sap:VirtualizedContainerService.HintSize="693,145" sap2010:WorkflowViewState.IdRef="Assign_4">
       <Assign.To>
         <OutArgument x:TypeArguments="s:Int32[]">[primeNumbers]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="s:Int32[]">[new Int32(){}]</InArgument>
+        <InArgument x:TypeArguments="s:Int32[]">[new Int32(){2,3}]</InArgument>
       </Assign.Value>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -128,7 +128,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <ParallelForEach x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText=" looping through the range" DisplayName="Parallel For Each : looping through the range" sap:VirtualizedContainerService.HintSize="693.3333333333334,2000" sap2010:WorkflowViewState.IdRef="ParallelForEach`1_2" Values="[Enumerable.Range(2, userInput-1)]">
+    <ParallelForEach x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText=" looping through the range" DisplayName="Parallel For Each : looping through the range" sap:VirtualizedContainerService.HintSize="693,1996" sap2010:WorkflowViewState.IdRef="ParallelForEach`1_2" Values="[Enumerable.Range(2, userInput-1)]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -138,7 +138,7 @@
         <ActivityAction.Argument>
           <DelegateInArgument x:TypeArguments="x:Int32" Name="item" />
         </ActivityAction.Argument>
-        <Sequence sap2010:Annotation.AnnotationText="Determining the prime numbers" DisplayName="Sequence : Determining the prime numbers" sap:VirtualizedContainerService.HintSize="642.6666666666666,1783.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_18">
+        <Sequence sap2010:Annotation.AnnotationText="Determining the prime numbers" DisplayName="Sequence : Determining the prime numbers" sap:VirtualizedContainerService.HintSize="643,1783" sap2010:WorkflowViewState.IdRef="Sequence_18">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>

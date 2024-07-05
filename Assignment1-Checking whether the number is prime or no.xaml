@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Assignment1_Checking_whether_the_number_is_prime_or_no" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="913,2389" sap2010:WorkflowViewState.IdRef="Assignment1_Checking_whether_the_number_is_prime_or_no_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Assignment1_Checking_whether_the_number_is_prime_or_no" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="903,2946" sap2010:WorkflowViewState.IdRef="Assignment1_Checking_whether_the_number_is_prime_or_no_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -88,7 +88,7 @@
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Assignment1_Checking_whether_the_number_is_prime_or_no" sap:VirtualizedContainerService.HintSize="737,2324" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Assignment1_Checking_whether_the_number_is_prime_or_no" sap:VirtualizedContainerService.HintSize="834,2881" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="userInput" />
       <Variable x:TypeArguments="x:Boolean" Name="flag" />
@@ -98,7 +98,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage sap2010:Annotation.AnnotationText=" indicating that execution started" DisplayName="Log Message : indicating that execution started" sap:VirtualizedContainerService.HintSize="675,99" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Execution started&quot;]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText=" indicating that execution started" DisplayName="Log Message : indicating that execution started" sap:VirtualizedContainerService.HintSize="772,99" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Execution started&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -107,7 +107,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="asking user input" DisplayName="Input Dialog - asking user input" sap:VirtualizedContainerService.HintSize="675,88" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="enter a  number" Title="user input">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="asking user input" DisplayName="Input Dialog - asking user input" sap:VirtualizedContainerService.HintSize="772,88" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="enter a  number" Title="user input">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:Int32">[userInput]</OutArgument>
       </ui:InputDialog.Result>
@@ -119,7 +119,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InputDialog>
-    <Assign sap2010:Annotation.AnnotationText="flag to check whether the number is prime or no " DisplayName="Assign : flag to check whether the number is prime or no " sap:VirtualizedContainerService.HintSize="675,145" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap2010:Annotation.AnnotationText="flag to check whether the number is prime or no " DisplayName="Assign : flag to check whether the number is prime or no " sap:VirtualizedContainerService.HintSize="772,145" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Boolean">[flag]</OutArgument>
       </Assign.To>
@@ -134,7 +134,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <If sap2010:Annotation.AnnotationText="Checking whether the number is prime or no" Condition="[userInput=0 or userInput=1]" DisplayName="If : Checking whether the number is prime or no" sap:VirtualizedContainerService.HintSize="675,1709" sap2010:WorkflowViewState.IdRef="If_1">
+    <If sap2010:Annotation.AnnotationText="Checking whether the number is prime or no" Condition="[userInput=0 or userInput=1]" DisplayName="If : Checking whether the number is prime or no" sap:VirtualizedContainerService.HintSize="772,2266" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -154,7 +154,7 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap2010:Annotation.AnnotationText="if the number is not 0 or 1" DisplayName="Else : if the number is not 0 or 1" sap:VirtualizedContainerService.HintSize="641,1312" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence sap2010:Annotation.AnnotationText="if the number is not 0 or 1" DisplayName="Else : if the number is not 0 or 1" sap:VirtualizedContainerService.HintSize="738,1869" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -162,19 +162,19 @@
               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:IfElseIfV2 Condition="[userInput=2 orelse userInput=3]" DisplayName="Else If : check user input is 2 or 3" sap:VirtualizedContainerService.HintSize="579,578" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
+          <ui:IfElseIfV2 Condition="[userInput=2 orelse userInput=3]" DisplayName="Else If : check user input is 2 or 3" sap:VirtualizedContainerService.HintSize="676,1135" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
             <ui:IfElseIfV2.Else>
-              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="545,167" sap2010:WorkflowViewState.IdRef="Sequence_11">
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="642,724" sap2010:WorkflowViewState.IdRef="Sequence_11">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ParallelForEach x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="checking based on whether the number is divisible or no" DisplayName="Parallel For Each : checking based on whether the number is divisible or no" sap:VirtualizedContainerService.HintSize="483,79" sap2010:WorkflowViewState.IdRef="ParallelForEach`1_1" Values="[Enumerable.Range(2, CInt(userInput / 2))]">
+                <ParallelForEach x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="checking based on whether the number is divisible or no" DisplayName="Parallel For Each : checking based on whether the number is divisible or no" sap:VirtualizedContainerService.HintSize="580,636" sap2010:WorkflowViewState.IdRef="ParallelForEach`1_1" Values="[Enumerable.Range(2, CInt(userInput / 2))]">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -241,7 +241,7 @@
               </Sequence>
             </ui:IfElseIfV2.Then>
           </ui:IfElseIfV2>
-          <If sap2010:Annotation.AnnotationText="based on flag determining prime or no" Condition="[flag=False]" DisplayName="If: based on flag determining prime or no" sap:VirtualizedContainerService.HintSize="579,615" sap2010:WorkflowViewState.IdRef="If_3">
+          <If sap2010:Annotation.AnnotationText="based on flag determining prime or no" Condition="[not flag]" DisplayName="If: based on flag determining prime or no" sap:VirtualizedContainerService.HintSize="676,615" sap2010:WorkflowViewState.IdRef="If_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -277,7 +277,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="Log Message : indicating that execution completed" DisplayName="Log Message : indicating that execution completed" sap:VirtualizedContainerService.HintSize="675,195" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Execution completed&quot;]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Log Message : indicating that execution completed" DisplayName="Log Message : indicating that execution completed" sap:VirtualizedContainerService.HintSize="772,195" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Execution completed&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
